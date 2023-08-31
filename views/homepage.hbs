@@ -116,12 +116,105 @@
 <div class="box2">
     <h3>Ưu đãi độc quyền!</h3>
     <p class="content">Chỉ có tại Luxstay, hấp dẫn và hữu hạn, book ngay!</p>
+    <div class="content__slider">
+        <div class="owl-carousel second" id="promotion-slider">
+            <div class="item">
+                <a href=""><img src="/images/promotion1.jpg" alt="" class="content__promotion-img"></a>
+            </div>
+            <div class="item">
+                <a href=""><img src="/images/promotion2.jpg" alt="" class="content__promotion-img"></a>
+            </div>
+            <div class="item">
+                <a href=""><img src="/images/promotion3.jpg" alt="" class="content__promotion-img"></a>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+<div class="box2">
+    <h3>Ưu đãi độc quyền!</h3>
+    <p class="content">Chỉ có tại Luxstay, hấp dẫn và hữu hạn, book ngay!</p>
+    <div class="content__slider">
+        <div class="owl-carousel" id="suggest-slider">
+            <div class="item">
+                <a href="" class="content__suggest-item-link"><img src="/images/suggest1.jpg" alt=""
+                        class="content__slider-img">
+                    <div class="content__suggest-item">
+                        <p class="content__suggest-heading">Hà Nội nội thành lãng mạn</p>
+                        <p class="content__suggest-description">Không gian lãng mạn dành cho cặp đôi tại trung tâm Hà
+                            Nội.</p>
+                    </div>
+                </a>
+            </div>
+            <div class="item">
+                <a href="" class="content__suggest-item-link"><img src="/images/suggest2.jpg" alt=""
+                        class="content__slider-img">
+                    <div class="content__suggest-item">
+                        <p class="content__suggest-heading">Vũng Tàu Biệt thự hồ bơi</p>
+                        <p class="content__suggest-description">Những căn biệt thự có hồ bơi dành cho kỳ nghỉ của bạn
+                            tại Vũng Tàu.</p>
+                    </div>
+                </a>
+            </div>
+            <div class="item">
+                <a href="" class="content__suggest-item-link"><img src="/images/suggest3.jpg" alt=""
+                        class="content__slider-img">
+                    <div class="content__suggest-item">
+                        <p class="content__suggest-heading">Hà Nội nội thành lãng mạn</p>
+                        <p class="content__suggest-description">Không gian lãng mạn dành cho cặp đôi tại trung tâm Hà
+                            Nội.</p>
+                    </div>
+                </a>
+            </div>
+            <div class="item">
+                <a href="" class="content__suggest-item-link"><img src="/images/suggest4.jpg" alt=""
+                        class="content__slider-img">
+                    <div class="content__suggest-item">
+                        <p class="content__suggest-heading">Sài Gòn cần là có ngay</p>
+                        <p class="content__suggest-description">Những căn homestay có 01 phòng ngủ tại Sài Gòn có thể
+                            đặt nhanh chóng.</p>
+                    </div>
+                </a>
+            </div>
+            <div class="item">
+                <a href="" class="content__suggest-item-link"><img src="/images/suggest5.jpg" alt=""
+                        class="content__slider-img">
+                    <div class="content__suggest-item">
+                        <p class="content__suggest-heading">Bể bơi & BBQ</p>
+                        <p class="content__suggest-description">Trải nghiệm đẳng cấp tại những căn homestay có bể bơi
+                            đẹp và khu vực BBQ ấm cúng.</p>
+                    </div>
+                </a>
+            </div>
+            <div class="item">
+                <a href="" class="content__suggest-item-link"><img src="/images/suggest6.jpg" alt=""
+                        class="content__slider-img">
+                    <div class="content__suggest-item">
+                        <p class="content__suggest-heading">Siêu giảm giá!</p>
+                        <p class="content__suggest-description">Top chỗ ở giảm giá đến 50% từ các chủ nhà thân thiện
+                            trên Luxstay.</p>
+                    </div>
+                </a>
+            </div>
+            <div class="item">
+                <a href="" class="content__suggest-item-link"><img src="/images/suggest7.jpg" alt=""
+                        class="content__slider-img">
+                    <div class="content__suggest-item">
+                        <p class="content__suggest-heading">Gần Trung tâm!</p>
+                        <p class="content__suggest-description">Dễ dàng di chuyển khắp nơi với top chỗ ở khu vực trung
+                            tâm thành phố Hồ Chí Minh.</p>
+                    </div>
+                </a>
+            </div>
+
+        </div>
+    </div>
 </div>
 
 <script>
-
     $(document).ready(function () {
-        $('.owl-carousel').owlCarousel({
+        $('#content-slider').owlCarousel({
             loop: true,
             margin: 10,
             nav: true,
@@ -136,6 +229,43 @@
                     items: 5
                 }
             }
-        })
+        });
+
+        $('#promotion-slider').owlCarousel({
+            loop: true,
+            margin: 10,
+            nav: true,
+            responsive: {
+                0: {
+                    items: 1
+                },
+                600: {
+                    items: 3
+                },
+                1000: {
+                    items: 3 // Thay đổi số lượng ảnh hiển thị thành 3 ở màn hình rộng 1000px trở lên
+                }
+            }
+        });
+
+        $('#suggest-slider').owlCarousel({
+            loop: true,
+            margin: 10,
+            nav: true,
+            responsive: {
+                0: {
+                    items: 1
+                },
+                600: {
+                    items: 3
+                },
+                1000: {
+                    items: 4 // Thay đổi số lượng ảnh hiển thị thành 3 ở màn hình rộng 1000px trở lên
+                }
+            }
+        });
+
+
     });
+
 </script>
