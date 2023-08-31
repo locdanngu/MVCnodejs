@@ -191,3 +191,36 @@ main {
     cursor: pointer;
     text-align: center;
 }
+
+.box3 {
+    display: flex;
+    justify-content: space-between;
+}
+
+.leftbox3, .rightbox3 {
+    width: 48%;
+}
+
+.download__app-content-description {
+    margin-top: 30px !important;
+}
+
+.btnleftbox3, .btnrightbox3 {
+    width: 50%;
+    height: 180px;
+}
+
+.download__app-by-store-img {
+    width: 138px;
+}
+
+.download__app-qrcode-img {
+    width: 180px;
+    height: 180px;
+    border: 1px solid #ccc;
+    padding: 10px;
+}
+
+.btnrightbox3{
+    padding: 15px 0;
+}
