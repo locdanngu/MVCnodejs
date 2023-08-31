@@ -32,6 +32,58 @@
     <h3>Địa điểm nổi bật</h3>
     <p class="content">Cùng Luxstay bắt đầu chuyến hành trình chinh phục thế giới của bạn</p>
 
-    
+    <!-- Set up your HTML -->
+    <div id="wp-slider">
+        <div class="owl-carousel">
+            <div> 
+                <img src="/images/location1.png" alt="">
+            </div>
+            <div> 
+                <img src="/images/location2.png" alt="">
+            </div>
+            <div> 
+                <img src="/images/location3.png" alt="">
+            </div>
+            <div> 
+                <img src="/images/location4.png" alt="">
+            </div>
+            <div> 
+                <img src="/images/location5.png" alt="">
+            </div>
+            <div> 
+                <img src="/images/location6.png" alt="">
+            </div>
+            <div> 
+                <img src="/images/location7.png" alt="">
+            </div>
+            <div> 
+                <img src="/images/location8.png" alt="">
+            </div>
+        </div>
+    </div>
+
+
+
 </div>
 
+<script>
+
+    $(document).ready(function () {
+      $('.owl-carousel').owlCarousel({
+        loop: true,
+        margin: 10,
+        nav: true,
+        responsive: {
+          0: {
+            items: 1
+          },
+          600: {
+            items: 3
+          },
+          1000: {
+            items: 5
+          }
+        }
+      })
+    });
+  </script>
