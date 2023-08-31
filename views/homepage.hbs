@@ -256,6 +256,23 @@
 <div class="box2">
     <h3>Hướng dẫn sử dụng</h3>
     <p class="content">Đặt chỗ nhanh, thanh toán đơn giản, sử dụng dễ dàng</p>
+    <div class="owl-carousel" id="tutorial-slider">
+        <div class="item">
+            <a href=""><img src="/images/tutorial1.jpg" alt="" class="content__promotion-img"></a>
+        </div>
+        <div class="item">
+            <a href=""><img src="/images/tutorial2.jpg" alt="" class="content__promotion-img"></a>
+        </div>
+        <div class="item">
+            <a href=""><img src="/images/tutorial3.jpg" alt="" class="content__promotion-img"></a>
+        </div>
+        <div class="item">
+            <a href=""><img src="/images/tutorial4.jpg" alt="" class="content__promotion-img"></a>
+        </div>
+        <div class="item">
+            <a href=""><img src="/images/tutorial5.jpg" alt="" class="content__promotion-img"></a>
+        </div>
+    </div>
 </div>
 
 <script>
@@ -327,6 +344,24 @@
                 }
             }
         });
+
+        $('#tutorial-slider').owlCarousel({
+            loop: true,
+            margin: 10,
+            nav: true,
+            responsive: {
+                0: {
+                    items: 1
+                },
+                600: {
+                    items: 3
+                },
+                1000: {
+                    items: 3 // Thay đổi số lượng ảnh hiển thị thành 3 ở màn hình rộng 1000px trở lên
+                }
+            }
+        });
+
 
     });
 
