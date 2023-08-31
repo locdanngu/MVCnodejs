@@ -94,3 +94,24 @@ main{
   justify-content: center;
   border: 1px solid #D6D2C4 !important;
 }
+
+.content__slider-name {
+    position: absolute;
+    top: 0;
+    left: 0;
+    color: #fff;
+    width: 100%;
+    height: 100%;
+  }
+
+  .content__slider-heading {
+    font-size: 25px;
+    font-weight: bold;
+    padding-left: 16px;
+    padding-top: 90%;
+  }
+
+  .content__slider-description {
+    font-weight: 400;
+    padding-left: 16px;
+  }

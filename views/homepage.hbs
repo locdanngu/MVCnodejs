@@ -31,59 +31,111 @@
 <div class="box2">
     <h3>Địa điểm nổi bật</h3>
     <p class="content">Cùng Luxstay bắt đầu chuyến hành trình chinh phục thế giới của bạn</p>
-
-    <!-- Set up your HTML -->
-    <div id="wp-slider">
+    {{!-- <div id="wp-slider">
         <div class="owl-carousel">
-            <div> 
-                <img src="/images/location1.png" alt="">
+            <img src="/images/location1.png" alt="">
+            <img src="/images/location2.png" alt="">
+            <img src="/images/location3.png" alt="">
+            <img src="/images/location4.png" alt="">
+            <img src="/images/location5.png" alt="">
+            <img src="/images/location6.png" alt="">
+            <img src="/images/location7.png" alt="">
+            <img src="/images/location8.png" alt="">
+        </div>
+    </div> --}}
+    <div class="content__slider">
+        <div class="owl-carousel" id="content-slider">
+            <div class="item content__slider-item">
+                <a href=""><img src="/images/location1.png" alt="" class="content__slider-img">
+                    <div class="content__slider-name">
+                        <h3 class="content__slider-heading">Hà Nội</h3>
+                        <p class="content__slider-description">2901 Chỗ ở</p>
+                    </div>
+                </a>
             </div>
-            <div> 
-                <img src="/images/location2.png" alt="">
+            <div class="item content__slider-item">
+                <a href=""><img src="/images/location2.png" alt="" class="content__slider-img">
+                    <div class="content__slider-name">
+                        <h3 class="content__slider-heading">TP. Hồ Chí Minh</h3>
+                        <p class="content__slider-description">2302 Chỗ ở</p>
+                    </div>
+                </a>
             </div>
-            <div> 
-                <img src="/images/location3.png" alt="">
+            <div class="item content__slider-item">
+                <a href=""><img src="/images/location3.png" alt="" class="content__slider-img">
+                    <div class="content__slider-name">
+                        <h3 class="content__slider-heading">Vũng Tàu</h3>
+                        <p class="content__slider-description">534 Chỗ ở</p>
+                    </div>
+                </a>
             </div>
-            <div> 
-                <img src="/images/location4.png" alt="">
+            <div class="item content__slider-item">
+                <a href=""><img src="/images/location4.png" alt="" class="content__slider-img">
+                    <div class="content__slider-name">
+                        <h3 class="content__slider-heading">Đà Lạt</h3>
+                        <p class="content__slider-description">1471 Chỗ ở</p>
+                    </div>
+                </a>
             </div>
-            <div> 
-                <img src="/images/location5.png" alt="">
+            <div class="item content__slider-item">
+                <a href=""><img src="/images/location5.png" alt="" class="content__slider-img">
+                    <div class="content__slider-name">
+                        <h3 class="content__slider-heading">Đà Nẵng</h3>
+                        <p class="content__slider-description">903 Chỗ ở</p>
+                    </div>
+                </a>
             </div>
-            <div> 
-                <img src="/images/location6.png" alt="">
+            <div class="item content__slider-item">
+                <a href=""><img src="/images/location6.png" alt="" class="content__slider-img">
+                    <div class="content__slider-name">
+                        <h3 class="content__slider-heading">Nha Trang</h3>
+                        <p class="content__slider-description">629 Chỗ ở</p>
+                    </div>
+                </a>
             </div>
-            <div> 
-                <img src="/images/location7.png" alt="">
+            <div class="item content__slider-item">
+                <a href=""><img src="/images/location7.png" alt="" class="content__slider-img">
+                    <div class="content__slider-name">
+                        <h3 class="content__slider-heading">Quảng Ninh</h3>
+                        <p class="content__slider-description">221 Chỗ ở</p>
+                    </div>
+                </a>
             </div>
-            <div> 
-                <img src="/images/location8.png" alt="">
+            <div class="item content__slider-item">
+                <a href=""><img src="/images/location8.png" alt="" class="content__slider-img">
+                    <div class="content__slider-name">
+                        <h3 class="content__slider-heading">Hội An</h3>
+                        <p class="content__slider-description">323 Chỗ ở</p>
+                    </div>
+                </a>
             </div>
         </div>
     </div>
+</div>
 
-
-
+<div class="box2">
+    <h3>Ưu đãi độc quyền!</h3>
+    <p class="content">Chỉ có tại Luxstay, hấp dẫn và hữu hạn, book ngay!</p>
 </div>
 
 <script>
 
     $(document).ready(function () {
-      $('.owl-carousel').owlCarousel({
-        loop: true,
-        margin: 10,
-        nav: true,
-        responsive: {
-          0: {
-            items: 1
-          },
-          600: {
-            items: 3
-          },
-          1000: {
-            items: 5
-          }
-        }
-      })
+        $('.owl-carousel').owlCarousel({
+            loop: true,
+            margin: 10,
+            nav: true,
+            responsive: {
+                0: {
+                    items: 1
+                },
+                600: {
+                    items: 3
+                },
+                1000: {
+                    items: 5
+                }
+            }
+        })
     });
-  </script>
+</script>
