@@ -17,3 +17,18 @@ main{
   margin-top: 12px;
   font-size: 16px;
 }
+
+.nutchuyen{
+    width: 10px !important;
+  height: 10px !important;
+  border-radius: 50%;
+  background-color: #59636d !important ;
+}
+
+.nutchuyen.active{
+    background-color: black !important;
+}
+
+.carousel-indicators{
+    bottom: 0 !important;
+}
