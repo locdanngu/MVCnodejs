@@ -212,6 +212,52 @@
     </div>
 </div>
 
+<div class="box2">
+    <h3>Gợi ý khám phá</h3>
+    <p class="content">Để mỗi chuyến đi là một hành trình truyền cảm hứng, mỗi căn phòng là một khoảng trời an yên</p>
+    <div class="owl-carousel" id="explore-slider">
+        <div class="item explore__slider-item">
+            <a href=""><img src="/images/explore1.jpg" alt="" class="content__slider-img"></a>
+            <div class="explore__slider-name">Thông tin HomeStay</div>
+            <p class="explore__slider-description">5 resort hạng sang ở Việt Nam xuất hiện trên tạp chí du lịch Anh</p>
+        </div>
+        <div class="item explore__slider-item">
+            <a href=""><img src="/images/explore2.jpg" alt="" class="content__slider-img"></a>
+            <div class="explore__slider-name">Thông tin HomeStay</div>
+            <p class="explore__slider-description">Du lịch Cần Thơ nhất định phải ghé thăm những địa điểm này</p>
+        </div>
+        <div class="item explore__slider-item">
+            <a href=""><img src="/images/explore3.jpg" alt="" class="content__slider-img"></a>
+            <div class="explore__slider-name">Thông tin HomeStay</div>
+            <p class="explore__slider-description">Tuần lễ “Tôi yêu bánh mì Sài Gòn” chính thức diễn ra từ ngày 24/3</p>
+        </div>
+        <div class="item explore__slider-item">
+            <a href=""><img src="/images/explore4.jpg" alt="" class="content__slider-img"></a>
+            <div class="explore__slider-name">Thông tin HomeStay</div>
+            <p class="explore__slider-description">Trải nghiệm thú vị ở sở thú Zoodoo Đà Lạt</p>
+        </div>
+        <div class="item explore__slider-item">
+            <a href=""><img src="/images/explore5.jpg" alt="" class="content__slider-img"></a>
+            <div class="explore__slider-name">Thông tin HomeStay</div>
+            <p class="explore__slider-description">Hội An sẽ lập chốt quản lý du khách đeo khẩu trang khi vào thành phố
+            </p>
+        </div>
+        <div class="item explore__slider-item">
+            <a href=""><img src="/images/explore6.jpg" alt="" class="content__slider-img"></a>
+            <div class="explore__slider-name">Thông tin HomeStay</div>
+            <p class="explore__slider-description">Thủ đô Hà Nội nằm trong danh sách những thành phố đẹp nhất thế giới
+            </p>
+        </div>
+    </div>
+
+</div>
+
+
+<div class="box2">
+    <h3>Hướng dẫn sử dụng</h3>
+    <p class="content">Đặt chỗ nhanh, thanh toán đơn giản, sử dụng dễ dàng</p>
+</div>
+
 <script>
     $(document).ready(function () {
         $('#content-slider').owlCarousel({
@@ -265,6 +311,22 @@
             }
         });
 
+        $('#explore-slider').owlCarousel({
+            loop: true,
+            margin: 10,
+            nav: true,
+            responsive: {
+                0: {
+                    items: 1
+                },
+                600: {
+                    items: 3
+                },
+                1000: {
+                    items: 3 // Thay đổi số lượng ảnh hiển thị thành 3 ở màn hình rộng 1000px trở lên
+                }
+            }
+        });
 
     });
 
