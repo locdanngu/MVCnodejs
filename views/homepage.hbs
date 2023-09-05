@@ -45,7 +45,17 @@
                 <!-- Start: Content Slider -->
                 <div class="content__slider">
                     <div class="owl-carousel" id="content-slider">
+                        {{#each cities}}
                         <div class="item content__slider-item">
+                            <a href=""><img src="{{this.imagecity}}" alt="" class="content__slider-img">
+                                <div class="content__slider-name">
+                                    <h3 class="content__slider-heading">{{this.namecity}}</h3>
+                                    <p class="content__slider-description">2901 Chỗ ở</p>
+                                </div>
+                            </a>
+                        </div>
+                        {{/each}}
+                        {{!-- <div class="item content__slider-item">
                             <a href=""><img src="/images/location1.png" alt="" class="content__slider-img">
                                 <div class="content__slider-name">
                                     <h3 class="content__slider-heading">Hà Nội</h3>
@@ -108,7 +118,7 @@
                                     <p class="content__slider-description">323 Chỗ ở</p>
                                 </div>
                             </a>
-                        </div>
+                        </div> --}}
                     </div>
                 </div>
                 <!-- End: Content Slider -->
@@ -222,9 +232,7 @@
         </div>
         <!-- End: Suggest -->
 
-        {{#each cities}}
-      <li>{{this.namecity}}, {{this.idcountry}}</li>
-    {{/each}}
+
 
         <!-- Start Explore -->
         <div class="content__container">
