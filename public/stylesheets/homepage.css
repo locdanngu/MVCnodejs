@@ -1,61 +1,83 @@
-main {
-    padding: 0 10%;
+
+/* End: Header */
+
+
+/* Start Slider */
+#slider{
     margin-top: calc(80px + 45px);
 }
 
-.carousel-item img {
-    border-radius: 16px !important;
+.owl-dots{
+    position: absolute;
+    right: 30px;
+    bottom: 5px;
 }
 
-.box2 {
-    margin-top: 48px;
+.owl-dot:focus{
+    outline: none;
 }
 
-.content {
+#slider img{
+    width: 100%;
+    height: 100%;
+    border-radius: 20px;
+}
+/* End Slider */
+
+/* Start: Main */
+/* Start Content */
+#main{
+    padding-top: 45px;
+    padding-bottom: 45px;
+    color: #222222;
+}
+
+.content__welcome-heading{
+    font-weight: bold;
+}
+
+.content__container{
+    margin-top: 45px;
+}
+
+.content-title{
+    margin-bottom: 0;
+    font-size: 24px;
+    font-weight: bold;
+}
+
+.content-description{
+    text-align: justify;
     text-align: justify;
     line-height: 1.8;
     margin-top: 12px;
-    font-size: 16px;
 }
 
-.nutchuyen {
-    width: 10px !important;
-    height: 10px !important;
-    border-radius: 50%;
-    background-color: #59636d !important;
+.content__welcome-link{
+    color: #222222;
+    text-decoration: underline;
 }
 
-.nutchuyen.active {
-    background-color: black !important;
+.content__welcome-link:hover{
+    color: var(--tomato-color);
+    transition: .3s linear;
 }
 
-.carousel-indicators {
-    bottom: 0 !important;
-}
-
-.content__slider-img {
-    height: 100%;
-    object-fit: cover;
-}
-
-/* .owl-carousel {
+.content__slider-item{
     height: 300px;
-} */
-
-#content-slider .owl-stage-outer div {
-    height: 300px;
-}
-
-.owl-dots {
-    display: none;
-}
-
-.owl-carousel.owl-loaded {
     position: relative;
 }
 
-#suggest-slider .owl-nav {
-    top: 40%;
+.content__slider-img{
+    width: 100%;
+    height: 100%;
+    border-radius: 3px;
+    object-fit: cover;
+}
+
+.content__slider-img:hover{
+    filter: blur(1px);
+    transform: scale(1.005);
 }
 
 .owl-nav {
@@ -68,14 +90,7 @@ main {
     justify-content: space-between;
 }
 
-
-.owl-nav span {
-    font-size: 32px !important;
-    font-weight: bold;
-    color: black;
-}
-
-.owl-prev {
+.owl-nav button.owl-prev{
     width: 50px;
     height: 50px;
     background: #fff !important;
@@ -83,11 +98,11 @@ main {
     margin-left: -25px;
     display: flex;
     align-items: center;
-    justify-content: center;
+    justify-content:center;
     border: 1px solid #ddd !important;
 }
 
-.owl-next {
+.owl-nav button.owl-next{
     width: 50px;
     height: 50px;
     background: #fff !important;
@@ -95,11 +110,21 @@ main {
     margin-right: -25px;
     display: flex;
     align-items: center;
-    justify-content: center;
+    justify-content:center;
     border: 1px solid #D6D2C4 !important;
 }
+.owl-nav button.owl-prev:focus,
+.owl-nav button.owl-next:focus{
+    outline: none;
+}
 
-.content__slider-name {
+.owl__nav-icon{
+    font-size: 25px;
+    font-weight: 300;
+    color: #555;
+}
+
+.content__slider-name{
     position: absolute;
     top: 0;
     left: 0;
@@ -108,81 +133,79 @@ main {
     height: 100%;
 }
 
-.content__slider-heading {
+.content__slider-heading{
     font-size: 25px;
     font-weight: bold;
     padding-left: 16px;
     padding-top: 90%;
 }
-
-.content__slider-description {
+.content__slider-description{
     font-weight: 400;
     padding-left: 16px;
 }
 
-.content__promotion-img {
-    border-radius: 16px;
+.content__promotion-img{
+    width: 100%;
+    height: 100%;
+    border-radius: 10px;
 }
 
-.content__suggest-heading {
-    text-transform: uppercase;
-    font-size: 13px;
-    font-weight: 500;
-    margin-bottom: 0;
-    color: #222;
+#suggest-slider >.owl-nav {
+    position: absolute;
+    width: 100%;
+    top: 30%;
+    transform: translateY(-35%);
+    color: #fff;
+    display: flex;
+    justify-content: space-between;
 }
-
-.content__slider-heading:hover {
-    text-decoration: none;
-}
-
-.content__suggest-description {
-    margin-top: 10px;
-    color: #222;
-}
-
-.content__suggest-item {
+.content__suggest-item{
     color: #222222;
     margin-top: 10px;
 }
 
-.content__suggest-item-link:hover {
-    text-decoration: none;
+.content__suggest-item-link{
+    color: #222222;
 }
 
-.content__slider-img:hover {
-    filter: blur(1px);
-    transform: scale(1.005);
+.content__suggest-heading{
+    text-transform: uppercase;
+    font-size: 13px;
+    font-weight: 500;
+    margin-bottom: 0;
 }
 
-.content__suggest-description:hover {
-    color: tomato;
+.content__suggest-description{
+    margin-top: 10px;
+}
+
+.content__suggest-description:hover{
+    color: var(--tomato-color);
     transition: .3s linear;
 }
 
-.explore__slider-item {
+.explore__slider-item{
     position: relative;
     height: 230px;
 }
 
-.explore__slider-description {
+.explore__slider-item::after{
     position: absolute;
+    content: '';
+    height: 50%;
+    width: 100%;
     bottom: 0;
-    color: #fff;
-    left: 20px;
-    font-weight: 500;
-    font-size: 17px;
-    z-index: 1;
+    background-image: linear-gradient(0deg, rgb(0 0 0 / 35%), transparent);
 }
 
-.explore__slider-name {
+.explore__slider-name{
     position: absolute;
     top: 30px;
     left: 50%;
     transform: translateX(-50%);
     background: rgb(0 0 0 / 23%);
     border-radius: 50px;
-    padding: 3px 26px;
+    padding: 3px 28px;
     font-size: 12px;
     font-weight: 500;
     color: #fff;
@@ -192,35 +215,164 @@ main {
     text-align: center;
 }
 
-.box3 {
+.explore__slider-name:hover{
+    background: rgb(0 0 0 / 50%);
+}
+
+.explore__slider-description{
+    position: absolute;
+    bottom: 0;
+    color: #fff;
+    left: 20px;
+    font-weight: 500;
+    font-size: 17px;
+    z-index: 1;
+}
+
+/* End Content */
+
+/* End: Main */
+
+/* Start: Download App */
+.download__app{
+    border-bottom: 1px solid var(--gray-color);
+    padding-bottom: 45px;
+}
+
+.download__app-introduce,
+.download__app-picture{
+    margin-top: 16px;
+}
+
+.download__app-logo-svg{
+    width: 343px;
+    max-width: 100%;
+}
+
+.download__app-content{
+    margin-top: 16px;
+}
+
+.download__app-content-heading{
+    font-weight: 700;
+}
+
+.download__app-content-description{
+    margin-top: 30px;
+    text-align: justify;
+}
+
+.download__app-by-image{
+    margin-top: 45px;
+}
+
+.download__app-qrcode{
     display: flex;
-    justify-content: space-between;
+    justify-content: center;
+    align-items: center;
 }
 
-.leftbox3, .rightbox3 {
-    width: 48%;
-}
-
-.download__app-content-description {
-    margin-top: 30px !important;
-}
-
-.btnleftbox3, .btnrightbox3 {
-    width: 50%;
-    height: 180px;
-}
-
-.download__app-by-store-img {
-    width: 138px;
-}
-
-.download__app-qrcode-img {
+.download__app-qrcode-img{
     width: 180px;
     height: 180px;
     border: 1px solid #ccc;
     padding: 10px;
 }
 
-.btnrightbox3{
-    padding: 15px 0;
+.download__app--app{
+    height: 100%;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
 }
+
+.download__app-by-store{
+    display: inline-block;
+    padding-top: 14px;
+}
+
+.download__app-by-store-img{
+    width: 138px;
+}
+
+.download__app-image{
+    width: 100%;
+}
+
+/* End: Download App */
+
+/* Start: Footer */
+#footer{
+    margin: 45px 0;
+}
+
+.contact-item{
+    display: flex;
+    align-items: center;
+    margin-top: 20px;
+}
+
+.contact-icon{
+    font-size: 30px;
+    width: 45px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 45px;
+    background: rgb(0 0 0 / 3%);
+    border-radius: 100%;
+}
+
+.contact__content{
+    margin-left: 6px;
+}
+
+.contact__content-title{
+    margin-bottom: 0;
+    font-size: 14px;
+    font-weight: 700;
+    padding-bottom: 5px;
+}
+
+
+.contact__content-link{
+    color: #222;
+    display: block;
+    line-height: 1.4;
+    font-size: 13px;
+    font-weight: 400;
+}
+
+.contact__content-link:hover{
+    color: var(--tomato-color);
+    transition: .2s linear;
+}
+/*  */
+
+
+
+
+/* Mobile: width < 740px <=> 46.1875em */
+/* Tablet: width >= 740px and width < 1024px  <=> 63.9375em */
+/* PC: width >= 1024px */
+
+/* ---------------------------------------------------------- */
+
+/* Mobile: width < 740px */
+@media screen and (max-width: 46.1875em) {
+    
+}
+
+/* Tablet: width >= 740px and width < 1024px*/
+@media screen and (min-width: 46.1875em) and (max-width: 63.9375em) {
+    .download__app-by-image{
+        display: none;
+    }
+}
+
+/* PC: width >= 1024px */
+@media screen and (min-width: 64em) {
+
+}
+
+
