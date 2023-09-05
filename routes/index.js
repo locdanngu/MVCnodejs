@@ -5,7 +5,7 @@ var router = express.Router();
 router.get('/', function(req, res, next) {
   const cssLink = '<link rel="stylesheet" href="/stylesheets/homepage.css">'; // Mã HTML cho thẻ <link>
 
-  res.render('homepage', { link: cssLink, title: 'Express' });
+  res.render('homepage', { link: cssLink, title: 'LuxStay' });
 });
 
 module.exports = router;
