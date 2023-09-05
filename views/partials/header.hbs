@@ -101,7 +101,8 @@
                 <ul class="header__nav-list">
                     <li class="header__nav-item"><a href="" class="header__nav-link">Guide</a></li>
                     <li class="header__nav-item"><a href="" class="header__nav-link host">Host</a></li>
-                    <li class="header__nav-item"><button class="header__nav-link">Đăng ký</button></li>
+                    <li class="header__nav-item" data-toggle="modal" data-target="#dangky"><button
+                            class="header__nav-link">Đăng ký</button></li>
                     <li class="header__nav-item" data-toggle="modal" data-target="#dangnhap"><button
                             class="header__nav-link">Đăng nhập</button></li>
                     <li class="header__nav-item">
@@ -170,7 +171,8 @@
                     <li class="nav__mobile-item"><a href="" class="nav__mobile-link">Guide</a></li>
                     <li class="nav__mobile-item"><a href="" class="nav__mobile-link nav__mobile-link-host">Host</a>
                     </li>
-                    <li class="nav__mobile-item"><a href="" class="nav__mobile-link">Đăng ký</a></li>
+                    <li class="nav__mobile-item" data-toggle="modal" data-target="#dangky"><button
+                            class="nav__mobile-link">Đăng ký</button></li>
                     <li class="nav__mobile-item" data-toggle="modal" data-target="#dangnhap"><button
                             class="nav__mobile-link">Đăng nhập</button></li>
                     <li class="nav__mobile-item">
@@ -255,22 +257,58 @@
                             <span></span>
                         </div>
                         <div class="content__forgot-buttons">
-                            <button>
-                                <span class="fixlineheight">
-                                    <svg class="" xml:space="preserve" style="enable-background:new 0 0 512 512"
-                                        viewBox="0 0 408.788 408.788" y="0" x="0" height="512" width="512"
-                                        xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1"
-                                        xmlns="http://www.w3.org/2000/svg">
-                                        <g>
-                                            <path class="" data-original="#475993" fill="#475993"
-                                                d="M353.701 0H55.087C24.665 0 .002 24.662.002 55.085v298.616c0 30.423 24.662 55.085 55.085 55.085h147.275l.251-146.078h-37.951a8.954 8.954 0 0 1-8.954-8.92l-.182-47.087a8.955 8.955 0 0 1 8.955-8.989h37.882v-45.498c0-52.8 32.247-81.55 79.348-81.55h38.65a8.955 8.955 0 0 1 8.955 8.955v39.704a8.955 8.955 0 0 1-8.95 8.955l-23.719.011c-25.615 0-30.575 12.172-30.575 30.035v39.389h56.285c5.363 0 9.524 4.683 8.892 10.009l-5.581 47.087a8.955 8.955 0 0 1-8.892 7.901h-50.453l-.251 146.078h87.631c30.422 0 55.084-24.662 55.084-55.084V55.085C408.786 24.662 384.124 0 353.701 0z">
-                                            </path>
-                                        </g>
-                                    </svg>
-                                </span>
-                                <span>Đăng nhập bằng Facebook</span>
-                            </button>
+                            <button data-toggle="modal" data-target="#dangky">Đăng ký ngay</button>
                             <button>Quên mật khẩu?</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="modal fade" id="dangky" tabindex="-1" role="dialog" aria-labelledby="dangkylabel" aria-hidden="true">
+    <div class="modal-dialog" role="document">
+        <div class="modal-content">
+            <div class="modal-body">
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                </button>
+                <div class="container2">
+                    <div class="content">
+                        <img src="/images/icon2.png" alt="" class="mb-5" height="80">
+                        <form class="content__form">
+                            <div class="content__inputs">
+                                <label>
+                                    <input required type="text">
+                                    <span>Tên đăng nhập</span>
+                                </label>
+                                <label>
+                                    <input required type="text">
+                                    <span>Email</span>
+                                </label>
+                                <label>
+                                    <input required type="text">
+                                    <span>Số điện thoại</span>
+                                </label>
+                                <label>
+                                    <input required type="password">
+                                    <span>Mật khẩu</span>
+                                </label>
+                            </div>
+                            <div class="d-flex align-items-center">
+                                <input type="checkbox" style="width:16px;height: 16px;margin-right: 8px;">
+                                <b>Tôi đồng ý với <a href="">Điều khoản</a> và <a href="">Chính sách</a></b>
+                            </div>
+                            <button>Đăng ký</button>
+                        </form>
+                        <div class="content__or-text">
+                            <span></span>
+                            <span>Hoặc</span>
+                            <span></span>
+                        </div>
+                        <div class="content__forgot-buttons">
+                            <button data-toggle="modal" data-target="#dangnhap">Đăng nhập ngay</button>
                         </div>
                     </div>
                 </div>

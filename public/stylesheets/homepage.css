@@ -56,6 +56,8 @@
 .content__welcome-link{
     color: #222222;
     text-decoration: underline;
+    background-color: transparent;
+    border: 0;
 }
 
 .content__welcome-link:hover{
