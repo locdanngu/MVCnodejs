@@ -222,6 +222,10 @@
         </div>
         <!-- End: Suggest -->
 
+        {{#each cities}}
+      <li>{{this.namecity}}, {{this.idcountry}}</li>
+    {{/each}}
+
         <!-- Start Explore -->
         <div class="content__container">
             <div class="content__explore">
