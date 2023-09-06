@@ -5,7 +5,7 @@ var router = express.Router();
 router.get('/', function (req, res, next) {
     const cssLink = '<link rel="stylesheet" href="/stylesheets/homestay.css">'; // Mã HTML cho thẻ <link>
     const script = '<script src="/javascripts/homestay.js"></script>'
-    res.render('homestay', { link: cssLink, script: script , title: 'Khách sạn' });
+    res.render('homestay', { link: cssLink, script: script , title: 'Khách sạn' , homestay: 'active'});
 });
 
 module.exports = router;

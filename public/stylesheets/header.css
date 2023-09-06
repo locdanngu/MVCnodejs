@@ -208,6 +208,10 @@
   background-color: #f2f2f2;
 }
 
+.header__search-options-item.active{
+  background-color: #f2f2f2;
+}
+
 .header__search-options-item::before {
   content: '';
   position: absolute;
