@@ -195,10 +195,16 @@
 .header__search-options-item {
   display: flex;
   align-items: center;
-  padding: 0 30px;
+  padding: 0 20px;
   position: relative;
   height: 100%;
   cursor: pointer;
+  color: #212529 !important;
+}
+
+.header__search-options-item:hover{
+  text-decoration: none;
+  background-color: #f2f2f2;
 }
 
 .header__search-options-item::before {
@@ -212,6 +218,7 @@
 
 .header__search-options-icon {
   width: 20px;
+  margin-right: 5px;
 }
 
 .header__search-submit {
