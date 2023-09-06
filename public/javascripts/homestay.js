@@ -39,3 +39,59 @@ $('#searchcity2').on('input click', function () {
         },
     });
 });
+
+$('#explore-slider').owlCarousel({
+    items: 3,
+    loop: true,
+    margin: 16,
+    nav: true,
+    navText: [
+        "<i class='fa fa-angle-left   owl__nav-icon'>",
+        "<i class='fa fa-angle-right  owl__nav-icon'>"
+    ],
+    responsive: {
+        0: {
+            items: 1
+        },
+        600: {
+            items: 1
+        },
+        768: {
+            items: 2
+        },
+        1024: {
+            items: 2
+        },
+        1239: {
+            items: 2
+        }
+    }
+});
+
+$('#content-slider').owlCarousel({
+    items: 5,
+    loop: true,
+    margin: 16,
+    nav: true,
+    navText: [
+        "<i class='fa fa-angle-left   owl__nav-icon'>",
+        "<i class='fa fa-angle-right  owl__nav-icon'>"
+    ],
+    responsive: {
+        0: {
+            items: 2
+        },
+        600: {
+            items: 3
+        },
+        768: {
+            items: 3
+        },
+        1024: {
+            items: 6
+        },
+        1239: {
+            items: 6
+        }
+    }
+});

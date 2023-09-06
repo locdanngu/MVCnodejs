@@ -1,3 +1,53 @@
+
+/* Start: Footer */
+#footer{
+    margin: 45px 0;
+}
+
+.contact-item{
+    display: flex;
+    align-items: center;
+    margin-top: 20px;
+}
+
+.contact-icon{
+    font-size: 30px;
+    width: 45px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 45px;
+    background: rgb(0 0 0 / 3%);
+    border-radius: 100%;
+}
+
+.contact__content{
+    margin-left: 6px;
+}
+
+.contact__content-title{
+    margin-bottom: 0;
+    font-size: 14px;
+    font-weight: 700;
+    padding-bottom: 5px;
+}
+
+
+.contact__content-link{
+    color: #222;
+    display: block;
+    line-height: 1.4;
+    font-size: 13px;
+    font-weight: 400;
+}
+
+.contact__content-link:hover{
+    color: var(--tomato-color);
+    transition: .2s linear;
+}
+/*  */
+
+
 .footer__content-heading{
     font-size: 14px;
     font-weight: bold;
