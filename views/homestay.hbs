@@ -6,8 +6,21 @@
         </div>
         <div class="header__search-suggest" id="ketquainput2">
             <h5 class="search__suggest-heading">KẾT QUẢ TÌM KIẾM</h5>
-            <ul class="search__suggest-list" id="ketquatimkiem2">
-            </ul>
+            <div class="d-flex justify-content-between">
+                <div style="width: 33%;">
+                    <ul class="search__suggest-list" id="ketquatimkiem2">
+                    </ul>
+                </div>
+                <div style="width: 33%;">
+                    <ul class="search__suggest-list" id="ketquatimkiem3">
+                    </ul>
+                </div>
+                <div style="width: 33%;">
+                    <ul class="search__suggest-list" id="ketquatimkiem4">
+                    </ul>
+                </div>
+            </div>
+
         </div>
     </div>
 
@@ -56,12 +69,12 @@
                 {{#each cities}}
                 <div class="item content__slider-item">
                     <a href=""><img src="{{this.imagecity}}" alt="" class="content__slider-img">
-                        
+
                     </a>
                     <div class="content__slider-name">
-                            <h3 class="content__slider-heading">{{this.namecity}}</h3>
-                            <p class="content__slider-description">2901 Chỗ ở</p>
-                        </div>
+                        <h3 class="content__slider-heading">{{this.namecity}}</h3>
+                        <p class="content__slider-description">2901 Chỗ ở</p>
+                    </div>
                 </div>
                 {{/each}}
             </div>
