@@ -1,43 +1,12 @@
-
 // Show Search Suggest
-$('#searchcity').focus(function () {
-    $('#ketquainput').fadeIn();
+$('#searchcity2').focus(function () {
+    $('#ketquainput2').fadeIn();
 });
-$('#searchcity').blur(function () {
-    $('#ketquainput').fadeOut();
-});
-
-
-$(document).ready(function () {
-    // Show Nav Mobile
-    $('.nav__mobile--show-btn').click(function () {
-        $('.nav__mobile').addClass('show-nav__mobile');
-        $('.nav_overlay').addClass('show-overlay');
-    });
-
-    $('.nav__mobile-close, .nav_overlay').click(function () {
-        $('.nav__mobile').removeClass('show-nav__mobile');
-        $('.nav_overlay').removeClass('show-overlay');
-    });
-
-    // Show Change Languages
-    $('.header__nav-language').click(function () {
-        $('.change__languages').toggleClass('show');
-    });
-
-    // Show Mobile Languages
-    $('.nav__mobile-language').click(function () {
-        $('.mobile__language').toggleClass('show-language');
-    });
+$('#searchcity2').blur(function () {
+    $('#ketquainput2').fadeOut();
 });
 
-// Loader Page
-$(window).on('load', function (e) {
-    $('.loader').delay(1000).fadeOut('lows');
-});
-
-
-$('#searchcity').on('input click', function () {
+$('#searchcity2').on('input click', function () {
     const searchValue = $(this).val();
 
     $.ajax({
@@ -46,7 +15,7 @@ $('#searchcity').on('input click', function () {
         data: { q: searchValue },
         success: function (data) {
             // Xử lý dữ liệu trả về và hiển thị trên giao diện
-            $('#ketquatimkiem').empty();
+            $('#ketquatimkiem2').empty();
             let htmlResult = ''; // Khởi tạo biến để tích luỹ chuỗi HTML
 
             data.forEach(function (cities) {
@@ -63,7 +32,7 @@ $('#searchcity').on('input click', function () {
             });
 
             // In chuỗi HTML ra searchResults
-            $('#ketquatimkiem').html(htmlResult);
+            $('#ketquatimkiem2').html(htmlResult);
         },
         error: function (error) {
             console.error(error);
