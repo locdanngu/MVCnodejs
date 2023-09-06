@@ -3,11 +3,10 @@ const { Op } = require('sequelize');
 
 // Controller cho route '/'
 exports.getHomePage = async (req, res, next) => {
-    const cssLink = '<link rel="stylesheet" href="/stylesheets/homepage.css">'; // Mã HTML cho thẻ <link>
-
+    const page = 'homepage'; 
     try {
         const cities = await City.findAll();
-        res.render('homepage', { link: cssLink, title: 'LuxStay', cities }); // Truyền dữ liệu vào template HBS
+        res.render('homepage', { page: page, title: 'LuxStay', cities }); // Truyền dữ liệu vào template HBS
     } catch (error) {
         console.error('Lỗi truy vấn:', error);
         res.render('error', { error: error.message });
