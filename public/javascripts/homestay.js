@@ -6,6 +6,14 @@ $('#searchcity2').blur(function () {
     $('#ketquainput2').fadeOut();
 });
 
+$('#ketquainput2').on('click', 'li', function() {
+    // Lấy tên thành phố từ thẻ p có class "search__suggest-title" trong phần tử li được nhấn
+    var cityName = $(this).find('.search__suggest-title').text();
+    
+    // Gán tên thành phố vào value của input có id "searchcity2"
+    $('#searchcity2').val(cityName);
+});
+
 $('#searchcity2').on('input click', function () {
     const searchValue = $(this).val();
 
@@ -75,12 +83,15 @@ $('#searchcity2').on('input click', function () {
             $('#ketquatimkiem2').html(htmlResult);
             $('#ketquatimkiem3').html(htmlResult2);
             $('#ketquatimkiem4').html(htmlResult3);
+
         },
         error: function (error) {
             console.error(error);
         },
     });
 });
+
+
 
 $('#explore-slider').owlCarousel({
     items: 3,
