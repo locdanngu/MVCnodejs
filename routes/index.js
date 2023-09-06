@@ -1,39 +1,33 @@
 var express = require('express');
 var router = express.Router();
-const Sequelize = require('sequelize');
+const City = require('../models/City');
 
-// Tạo một đối tượng Sequelize và cấu hình kết nối đến cơ sở dữ liệu MySQL
-const sequelize = new Sequelize('testnodejs', 'root', null, {
-  host: 'localhost',
-  dialect: 'mysql'
-});
+// let connectDB = async () => {
+//   try{
+//     await sequelize.authenticate();
+//     console.log('Kết nối thành công');
 
-let connectDB = async () => {
-  try{
-    await sequelize.authenticate();
-    console.log('Kết nối thành công');
+//   }catch (error) {
+//     console.error('Kết nối lỗi', error);
+//   }
+// }
 
-  }catch (error) {
-    console.error('Kết nối lỗi', error);
-  }
-}
-
-module.exports = connectDB;
+// module.exports = connectDB;
 
 // Định nghĩa model cho bảng city
-const City = sequelize.define('city', {
-  idcity: {
-    type: Sequelize.INTEGER,
-    primaryKey: true,
-    autoIncrement: true
-  },
-  namecity: Sequelize.TEXT,
-  idcountry: Sequelize.INTEGER,
-  imagecity: Sequelize.TEXT
-}
-, {
-  tableName: 'city' // Đặt tên bảng cụ thể là 'city'
-});
+// const City = sequelize.define('city', {
+//   idcity: {
+//     type: Sequelize.INTEGER,
+//     primaryKey: true,
+//     autoIncrement: true
+//   },
+//   namecity: Sequelize.TEXT,
+//   idcountry: Sequelize.INTEGER,
+//   imagecity: Sequelize.TEXT
+// }
+// , {
+//   tableName: 'city' // Đặt tên bảng cụ thể là 'city'
+// });
 
 
 // Kết nối đến cơ sở dữ liệu
