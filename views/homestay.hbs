@@ -23,64 +23,67 @@
 
         </div>
     </div>
+    <div id="changecontent">
+        <div class="content__welcome mt-5">
+            <h3 class="content__welcome-heading">Ưu đãi</h3>
+            <p class="content-description">
+                Khuyến mãi, giảm giá và ưu đãi đặc biệt dành riêng cho bạn
+            </p>
 
-    <div class="content__welcome mt-5">
-        <h3 class="content__welcome-heading">Ưu đãi</h3>
-        <p class="content-description">
-            Khuyến mãi, giảm giá và ưu đãi đặc biệt dành riêng cho bạn
-        </p>
-
-        <div class="explore__slider">
-            <div class="owl-carousel" id="explore-slider">
-                <div class="item explore__slider-item">
-                    <a href=""><img src="/images/homestay1.png" alt="" class="content__slider-img"></a>
-                    <p class="explore__slider-description"><b style="font-size: 24px;">Tận hưởng kỳ nghỉ dài nhất của
-                            bạn</b>
-                        <br>
-                        Tìm kiếm các chỗ nghỉ cho phép lưu trú dài ngày với giá theo tháng ưu đãi.
-                    </p>
-                </div>
-                <div class="item explore__slider-item">
-                    <a href=""><img src="/images/homestay2.png" alt="" class="content__slider-img"></a>
-                    <p class="explore__slider-description"><b style="font-size: 24px;">Vi vu theo cách của bạn</b>
-                        <br>
-                        Tiết kiệm ít nhất 15% cho lưu trú toàn cầu, từ nghỉ dưỡng đến phiêu lưu hoang dã
-                    </p>
-                </div>
-                <div class="item explore__slider-item">
-                    <a href=""><img src="/images/homestay3.png" alt="" class="content__slider-img"></a>
-                    <p class="explore__slider-description"><b style="font-size: 24px;">Tiết kiệm 15% với Ưu Đãi Cuối
-                            Năm</b>
-                        <br>
-                        Khám phá hàng nghìn điểm đến khắp thế giới và tiết kiệm từ 15%
-                    </p>
-                </div>
-            </div>
-        </div>
-    </div>
-
-    <div class="content__welcome">
-        <h3 class="content__welcome-heading">Khám phá Việt Nam</h3>
-        <p class="content-description">
-            Các điểm đến phổ biến này có nhiều điều chờ đón bạn
-        </p>
-        <div class="content__slider">
-            <div class="owl-carousel" id="content-slider">
-                {{#each cities}}
-                <div class="item content__slider-item">
-                    <a href=""><img src="{{this.imagecity}}" alt="" class="content__slider-img">
-
-                    </a>
-                    <div class="content__slider-name">
-                        <h3 class="content__slider-heading">{{this.namecity}}</h3>
-                        <p class="content__slider-description">2901 Chỗ ở</p>
+            <div class="explore__slider">
+                <div class="owl-carousel" id="explore-slider">
+                    <div class="item explore__slider-item">
+                        <a href=""><img src="/images/homestay1.png" alt="" class="content__slider-img"></a>
+                        <p class="explore__slider-description"><b style="font-size: 24px;">Tận hưởng kỳ nghỉ dài nhất
+                                của
+                                bạn</b>
+                            <br>
+                            Tìm kiếm các chỗ nghỉ cho phép lưu trú dài ngày với giá theo tháng ưu đãi.
+                        </p>
+                    </div>
+                    <div class="item explore__slider-item">
+                        <a href=""><img src="/images/homestay2.png" alt="" class="content__slider-img"></a>
+                        <p class="explore__slider-description"><b style="font-size: 24px;">Vi vu theo cách của bạn</b>
+                            <br>
+                            Tiết kiệm ít nhất 15% cho lưu trú toàn cầu, từ nghỉ dưỡng đến phiêu lưu hoang dã
+                        </p>
+                    </div>
+                    <div class="item explore__slider-item">
+                        <a href=""><img src="/images/homestay3.png" alt="" class="content__slider-img"></a>
+                        <p class="explore__slider-description"><b style="font-size: 24px;">Tiết kiệm 15% với Ưu Đãi Cuối
+                                Năm</b>
+                            <br>
+                            Khám phá hàng nghìn điểm đến khắp thế giới và tiết kiệm từ 15%
+                        </p>
                     </div>
                 </div>
-                {{/each}}
             </div>
         </div>
 
+        <div class="content__welcome">
+            <h3 class="content__welcome-heading">Khám phá Việt Nam</h3>
+            <p class="content-description">
+                Các điểm đến phổ biến này có nhiều điều chờ đón bạn
+            </p>
+            <div class="content__slider">
+                <div class="owl-carousel" id="content-slider">
+                    {{#each cities}}
+                    <div class="item content__slider-item">
+                        <a href=""><img src="{{this.imagecity}}" alt="" class="content__slider-img">
+
+                        </a>
+                        <div class="content__slider-name">
+                            <h3 class="content__slider-heading">{{this.namecity}}</h3>
+                            <p class="content__slider-description">2901 Chỗ ở</p>
+                        </div>
+                    </div>
+                    {{/each}}
+                </div>
+            </div>
+
+        </div>
     </div>
+
 
 
 
