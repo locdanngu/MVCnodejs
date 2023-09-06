@@ -712,6 +712,11 @@ button:focus{
   opacity: .7;
 }
 
+.margin_body{
+  margin-top: calc(80px + 45px);
+  height: 0;
+}
+
 
 
 @media screen and (max-width: 46.1875em) {
