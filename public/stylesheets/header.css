@@ -748,6 +748,11 @@ button:focus{
   .nav__mobile-btn {
     display: block;
   }
+
+  .container{
+    padding-right: 30px;
+  padding-left: 30px;
+  }
 }
 
 @media screen and (min-width: 46.1875em) and (max-width: 63.9375em) {
@@ -761,6 +766,11 @@ button:focus{
 
   .nav__mobile-btn {
     display: block;
+  }
+
+  .container{
+    padding-right: 30px;
+  padding-left: 30px;
   }
 }
 

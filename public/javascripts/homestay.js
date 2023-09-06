@@ -79,10 +79,10 @@ $('#content-slider').owlCarousel({
     ],
     responsive: {
         0: {
-            items: 2
+            items: 1
         },
         600: {
-            items: 3
+            items: 2
         },
         768: {
             items: 3
