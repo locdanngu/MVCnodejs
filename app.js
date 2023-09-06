@@ -6,6 +6,7 @@ var logger = require('morgan');
 var hbs = require('hbs'); // Định nghĩa thư viện Handlebars
 // const mysql = require('mysql2');
 
+var homestayRouter = require('./routes/homestay');
 var indexRouter = require('./routes/index');
 var usersRouter = require('./routes/users');
 
@@ -23,6 +24,7 @@ app.use(cookieParser());
 app.use(express.static(path.join(__dirname, 'public')));
 
 app.use('/', indexRouter);
+app.use('/homestay', homestayRouter);
 app.use('/users', usersRouter);
 
 // catch 404 and forward to error handler
