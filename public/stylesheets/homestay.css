@@ -352,7 +352,7 @@
   transform: translateY(-50%) scale(.9);
   margin: 0em;
   margin-left: 1.3em;
-  padding: 0.4em;
+  padding: 0.4px;
   background-color: #fff;
 }
 

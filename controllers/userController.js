@@ -15,7 +15,8 @@ exports.login = (req, res, next) => {
         const user = req.user;
         // Truyền thông tin người dùng vào session (nếu bạn sử dụng session)
         req.session.user = user;
-        res.redirect('/');
+        const backpage = req.body.backpage || '/';
+        res.redirect(backpage);
     });
 };
 

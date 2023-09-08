@@ -646,11 +646,11 @@ button:focus{
   vertical-align: middle;
 }
 
-.content__form input:valid+span {
+.content__form input:valid+span , .content__form input:focus+span {
   transform: scale(calc(10 / 12)) translateY(-10px);
 }
 
-.content__form input:valid {
+.content__form input:valid ,.content__form input:focus  {
   padding: 14px 0 2px 8px;
   font-size: 12px;
 }

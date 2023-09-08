@@ -43,6 +43,10 @@ $(document).ready(function () {
     $('.nav__mobile-language').click(function () {
         $('.mobile__language').toggleClass('show-language');
     });
+
+    // Lấy đường dẫn URL hiện tại và gán cho thẻ input khi trang đã tải xong
+    $("#backpage").val(window.location.href);
+ 
 });
 
 // Loader Page
