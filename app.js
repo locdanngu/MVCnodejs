@@ -5,12 +5,31 @@ var cookieParser = require('cookie-parser');
 var logger = require('morgan');
 var hbs = require('hbs'); // Định nghĩa thư viện Handlebars
 // const mysql = require('mysql2');
+const passport = require('passport');
+const session = require('express-session');
+const flash = require('connect-flash');
 
 var homestayRouter = require('./routes/homestay');
 var indexRouter = require('./routes/index');
 var usersRouter = require('./routes/users');
 
+
 var app = express();
+
+app.use(
+    session({
+        secret: 'your-secret-key',
+        resave: false,
+        saveUninitialized: false,
+    })
+);
+
+
+app.use(passport.initialize());
+app.use(passport.session());
+
+app.use(flash());
+
 
 // view engine setup
 app.set('views', path.join(__dirname, 'views'));
