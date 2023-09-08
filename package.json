@@ -3,6 +3,7 @@
   "version": "0.0.0",
   "private": true,
   "scripts": {
+    "seed:all": "sequelize db:seed:all --config ./config/config.json",
     "start": "nodemon ./bin/www"
   },
   "dependencies": {
@@ -21,6 +22,7 @@
     "sequelize": "^6.32.1"
   },
   "devDependencies": {
-    "nodemon": "^3.0.1"
+    "nodemon": "^3.0.1",
+    "sequelize-cli": "^6.6.1"
   }
 }
