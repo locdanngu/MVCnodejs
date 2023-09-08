@@ -18,15 +18,8 @@ exports.getHomePage = async (req, res, next) => {
     const page = 'homepage'; 
     try {
         const cities = await City.findAll();
-        
-        // Kiểm tra xem có phiên đăng nhập và thông tin người dùng trong session hay không
-        if (req.session && req.session.user) {
-            const user = req.session.user; // Lấy thông tin người dùng từ session
-            res.render('homepage', { page: page, title: 'LuxStay', cities, user }); // Truyền thông tin người dùng vào template HBS
-        } else {
-            // Không có phiên đăng nhập hoặc không có thông tin người dùng trong session
-            res.render('homepage', { page: page, title: 'LuxStay', cities }); // Truyền dữ liệu vào template HBS mà không có thông tin người dùng
-        }
+        const user = req.session.user; // Lấy thông tin người dùng từ session
+        res.render('homepage', { page: page, title: 'LuxStay', cities, user }); // Truyền thông tin người dùng vào template HBS
     } catch (error) {
         console.error('Lỗi truy vấn:', error);
         res.render('error', { error: error.message });

@@ -28,10 +28,14 @@
         <div class="content__welcome">
             <h3 class="content__welcome-heading">Chào mừng đến với Luxstay!</h3>
             <p class="content-description">
-                Đặt chỗ ở, homestay, cho thuê xe, trải nghiệm và nhiều hơn nữa trên Luxstay <br>
+                Đặt chỗ ở, homestay, cho thuê xe, trải nghiệm và nhiều hơn nữa trên Luxstay
+                {{#if user}}
+                {{else}}
+                <br>
                 <button class="content__welcome-link" data-toggle="modal" data-target="#dangnhap">Đăng nhập</button>
                 hoặc <button class="content__welcome-link" data-toggle="modal" data-target="#dangky">Đăng ký</button> để
                 trải nghiệm !
+                {{/if}}
             </p>
         </div>
         <!--End: Welcome  -->
@@ -55,70 +59,6 @@
                             </a>
                         </div>
                         {{/each}}
-                        {{!-- <div class="item content__slider-item">
-                            <a href=""><img src="/images/location1.png" alt="" class="content__slider-img">
-                                <div class="content__slider-name">
-                                    <h3 class="content__slider-heading">Hà Nội</h3>
-                                    <p class="content__slider-description">2901 Chỗ ở</p>
-                                </div>
-                            </a>
-                        </div>
-                        <div class="item content__slider-item">
-                            <a href=""><img src="/images/location2.png" alt="" class="content__slider-img">
-                                <div class="content__slider-name">
-                                    <h3 class="content__slider-heading">TP. Hồ Chí Minh</h3>
-                                    <p class="content__slider-description">2302 Chỗ ở</p>
-                                </div>
-                            </a>
-                        </div>
-                        <div class="item content__slider-item">
-                            <a href=""><img src="/images/location3.png" alt="" class="content__slider-img">
-                                <div class="content__slider-name">
-                                    <h3 class="content__slider-heading">Vũng Tàu</h3>
-                                    <p class="content__slider-description">534 Chỗ ở</p>
-                                </div>
-                            </a>
-                        </div>
-                        <div class="item content__slider-item">
-                            <a href=""><img src="/images/location4.png" alt="" class="content__slider-img">
-                                <div class="content__slider-name">
-                                    <h3 class="content__slider-heading">Đà Lạt</h3>
-                                    <p class="content__slider-description">1471 Chỗ ở</p>
-                                </div>
-                            </a>
-                        </div>
-                        <div class="item content__slider-item">
-                            <a href=""><img src="/images/location5.png" alt="" class="content__slider-img">
-                                <div class="content__slider-name">
-                                    <h3 class="content__slider-heading">Đà Nẵng</h3>
-                                    <p class="content__slider-description">903 Chỗ ở</p>
-                                </div>
-                            </a>
-                        </div>
-                        <div class="item content__slider-item">
-                            <a href=""><img src="/images/location6.png" alt="" class="content__slider-img">
-                                <div class="content__slider-name">
-                                    <h3 class="content__slider-heading">Nha Trang</h3>
-                                    <p class="content__slider-description">629 Chỗ ở</p>
-                                </div>
-                            </a>
-                        </div>
-                        <div class="item content__slider-item">
-                            <a href=""><img src="/images/location7.png" alt="" class="content__slider-img">
-                                <div class="content__slider-name">
-                                    <h3 class="content__slider-heading">Quảng Ninh</h3>
-                                    <p class="content__slider-description">221 Chỗ ở</p>
-                                </div>
-                            </a>
-                        </div>
-                        <div class="item content__slider-item">
-                            <a href=""><img src="/images/location8.png" alt="" class="content__slider-img">
-                                <div class="content__slider-name">
-                                    <h3 class="content__slider-heading">Hội An</h3>
-                                    <p class="content__slider-description">323 Chỗ ở</p>
-                                </div>
-                            </a>
-                        </div> --}}
                     </div>
                 </div>
                 <!-- End: Content Slider -->

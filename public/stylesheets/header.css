@@ -261,6 +261,7 @@
 }
 
 .header__nav-link {
+  line-height: 1 !important;
   padding: 10px 15px;
   color: #000;
   font-size: 14px;
