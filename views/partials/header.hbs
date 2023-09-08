@@ -32,69 +32,10 @@
                         <i class="fas fa-car-side  header__search-options-icon"></i>Thuê xe
                     </a>
                 </div>
-                {{!-- <div class="header__search-submit">
-                    <button class="header__search-submit-btn">
-                        <span class="fas fa-search  header__search-submit-icon"></span>
-                    </button>
-                </div> --}}
 
                 <div class="header__search-suggest" id="ketquainput">
                     <h5 class="search__suggest-heading">KẾT QUẢ TÌM KIẾM</h5>
                     <ul class="search__suggest-list" id="ketquatimkiem">
-                        {{!-- <li class="search__suggest-item">
-                            <div class="search__suggest-thumbnail">
-                                <img src="/images/location1.png" alt="" class="search__suggest-thumbnail-img">
-                            </div>
-                            <div class="search__suggest-content">
-                                <p class="search__suggest-title">Phương Sài, Nha Trang, Khánh Hòa </p>
-                                <small>6 Chỗ ở</small>
-                            </div>
-                        </li>
-                        <li class="search__suggest-item active">
-                            <div class="search__suggest-thumbnail">
-                                <img src="/images/location6.png" alt="" class="search__suggest-thumbnail-img">
-                            </div>
-                            <div class="search__suggest-content">
-                                <p class="search__suggest-title">Sài Đồng, Long Biên, Hà Nội </p>
-                                <small>3 Chỗ ở</small>
-                            </div>
-                        </li>
-                        <li class="search__suggest-item">
-                            <div class="search__suggest-thumbnail">
-                                <img src="/images/location2.png" alt="" class="search__suggest-thumbnail-img">
-                            </div>
-                            <div class="search__suggest-content">
-                                <p class="search__suggest-title">Tổ hợp TSG Lotus Sài Đồng, Long Biên, Hà Nội </p>
-                                <small>1 Chỗ ở</small>
-                            </div>
-                        </li>
-                        <li class="search__suggest-item">
-                            <div class="search__suggest-thumbnail">
-                                <img src="/images/location8.png" alt="" class="search__suggest-thumbnail-img">
-                            </div>
-                            <div class="search__suggest-content">
-                                <p class="search__suggest-title">Asahi Luxstay - TSG Lotus Sài Đồng Apartment </p>
-                                <small>3 Chỗ ở</small>
-                            </div>
-                        </li>
-                        <li class="search__suggest-item">
-                            <div class="search__suggest-thumbnail">
-                                <img src="/images/location4.png" alt="" class="search__suggest-thumbnail-img">
-                            </div>
-                            <div class="search__suggest-content">
-                                <p class="search__suggest-title">Moon Westlake Studio view vườn phố Trích Sài </p>
-                                <small>3 Chỗ ở</small>
-                            </div>
-                        </li>
-                        <li class="search__suggest-item">
-                            <div class="search__suggest-thumbnail">
-                                <img src="/images/location5.png" alt="" class="search__suggest-thumbnail-img">
-                            </div>
-                            <div class="search__suggest-content">
-                                <p class="search__suggest-title">Đà Nẵng </p>
-                                <small>1204 Chỗ ở</small>
-                            </div>
-                        </li> --}}
                     </ul>
                 </div>
             </div>
@@ -104,10 +45,15 @@
                 <ul class="header__nav-list">
                     <li class="header__nav-item"><a href="" class="header__nav-link">Guide</a></li>
                     <li class="header__nav-item"><a href="" class="header__nav-link host">Host</a></li>
+                    {{#if user}}
+                    <li class="header__nav-item"><button
+                            class="header__nav-link">{{user.email}}</button></li>
+                    {{else}}
                     <li class="header__nav-item" data-toggle="modal" data-target="#dangky"><button
                             class="header__nav-link">Đăng ký</button></li>
                     <li class="header__nav-item" data-toggle="modal" data-target="#dangnhap"><button
                             class="header__nav-link">Đăng nhập</button></li>
+                    {{/if}}
                     <li class="header__nav-item">
                         <div class="header__nav-language">
                             <img src="/images/vi.svg" alt="VietNamese" class="header__nav-language-img">
@@ -174,10 +120,15 @@
                     <li class="nav__mobile-item"><a href="" class="nav__mobile-link">Guide</a></li>
                     <li class="nav__mobile-item"><a href="" class="nav__mobile-link nav__mobile-link-host">Host</a>
                     </li>
+                    {{#if user}}
+                    <li class="nav__mobile-item"><button
+                            class="nav__mobile-link">{{user.email}}</button></li>
+                    {{else}}
                     <li class="nav__mobile-item" data-toggle="modal" data-target="#dangky"><button
                             class="nav__mobile-link">Đăng ký</button></li>
                     <li class="nav__mobile-item" data-toggle="modal" data-target="#dangnhap"><button
                             class="nav__mobile-link">Đăng nhập</button></li>
+                    {{/if}}
                     <li class="nav__mobile-item">
                         <div class="nav__mobile-language">
                             <img src="/images/vi.svg" alt="VietNamese" class="nav__mobile-language-img">

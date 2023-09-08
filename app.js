@@ -17,11 +17,15 @@ var usersRouter = require('./routes/users');
 var app = express();
 
 app.use(
-    session({
-        secret: 'your-secret-key',
-        resave: false,
-        saveUninitialized: false,
-    })
+  session({
+    secret: 'your-secret-key',
+    resave: false,
+    saveUninitialized: false,
+    cookie: { 
+      secure: false, // Nếu bạn sử dụng HTTPS, hãy đặt true
+      maxAge: 365 * 24 * 60 * 60 * 1000 // Thời gian hết hạn là 1 năm
+  }
+  })
 );
 
 
@@ -47,12 +51,12 @@ app.use('/homestay', homestayRouter);
 app.use('/users', usersRouter);
 
 // catch 404 and forward to error handler
-app.use(function(req, res, next) {
+app.use(function (req, res, next) {
   next(createError(404));
 });
 
 // error handler
-app.use(function(err, req, res, next) {
+app.use(function (err, req, res, next) {
   // set locals, only providing error in development
   res.locals.message = err.message;
   res.locals.error = req.app.get('env') === 'development' ? err : {};
