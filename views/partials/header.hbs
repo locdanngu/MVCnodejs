@@ -236,22 +236,23 @@
                 <div class="container2">
                     <div class="content">
                         <img src="/images/icon2.png" alt="" class="mb-5" height="80">
-                        <form class="content__form">
+                        <form class="content__form" method="post" action="/users/dangky">
+                            <input type="hidden" name="backpage" id="backpage2">
                             <div class="content__inputs">
                                 <label>
-                                    <input required type="text">
+                                    <input required type="text" name="username">
                                     <span>Tên đăng nhập</span>
                                 </label>
                                 <label>
-                                    <input required type="text">
+                                    <input required type="text" name="email">
                                     <span>Email</span>
                                 </label>
                                 <label>
-                                    <input required type="text">
+                                    <input required type="text" name="phone">
                                     <span>Số điện thoại</span>
                                 </label>
                                 <label>
-                                    <input required type="password">
+                                    <input required type="password" name="password">
                                     <span>Mật khẩu</span>
                                 </label>
                             </div>
@@ -295,4 +296,3 @@
         </div>
     </div>
 </div>
-

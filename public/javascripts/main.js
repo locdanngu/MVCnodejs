@@ -46,7 +46,7 @@ $(document).ready(function () {
 
     // Lấy đường dẫn URL hiện tại và gán cho thẻ input khi trang đã tải xong
     $("#backpage").val(window.location.href);
- 
+    $("#backpage2").val(window.location.href);
 });
 
 // Loader Page

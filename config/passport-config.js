@@ -3,6 +3,7 @@ const passport = require('passport');
 const { Op } = require('sequelize');
 const LocalStrategy = require('passport-local').Strategy;
 const User = require('../models/User'); // Import mô hình người dùng
+const bcrypt = require('bcrypt');
 
 passport.use(
     new LocalStrategy(
@@ -45,13 +46,60 @@ passport.serializeUser((user, done) => {
     done(null, user.iduser);
 });
 
-passport.deserializeUser(async (id, done) => {
+passport.deserializeUser(async (iduser, done) => {
+    console.log(iduser);
     try {
-        const user = await User.findByPk(id);
+        const user = await User.findByPk(iduser);
+        
         done(null, user);
     } catch (error) {
         done(error);
     }
 });
+
+
+passport.use(
+    'register',
+    new LocalStrategy(
+        {
+            usernameField: 'username',
+            passwordField: 'password',
+            passReqToCallback: true,
+        },
+        async (req, username, password, done) => {
+            const { email, phone } = req.body;
+
+            try {
+                const user = await User.findOne({
+                    where: {
+                        [Op.or]: [
+                            { email },
+                            { username },
+                            { phone },
+                        ],
+                    },
+                });
+
+                if (user) {
+                    return done(null, false, { message: 'Thông tin tài khoản đã tồn tại' });
+                }
+
+                const hashedPassword = await bcrypt.hash(password, 10);
+
+                const newUser = await User.create({
+                    username,
+                    phone,
+                    email,
+                    password: hashedPassword,
+                });
+
+                return done(null, newUser);
+            } catch (error) {
+                return done(error);
+            }
+        }
+    )
+);
+
 
 module.exports = passport;

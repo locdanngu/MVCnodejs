@@ -14,15 +14,6 @@ module.exports = {
         createdAt: new Date(),
         updatedAt: new Date(),
       },
-      {
-        username: 'user2',
-        email: 'user2@example.com',
-        phone: '9876543210',
-        password: hashedPassword,
-        createdAt: new Date(),
-        updatedAt: new Date(),
-      },
-      // Thêm các bản ghi người dùng khác ở đây nếu cần
     ]);
   },
 
